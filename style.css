@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* LAYOUT */
+main {
+  position: relative;
+  width: 100%;
+  max-width: 90rem;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.player {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+  width: 100%;
+}
+
+/* ELEMENTS */
+.name {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.score {
+  font-size: 6rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player--active .name {
+  font-weight: 700;
+}
+.player--active .score {
+  font-weight: 400;
+}
+
+.current {
+  background-color: #c7365f;
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.current-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: #ddd;
+}
+
+.current-score {
+  font-size: 3rem;
+}
+
+/* BUTTONS */
+.btn {
+  margin: 1rem 0;
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 20rem;
+}
+
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.dice {
+  margin: 1rem auto;
+  height: 8rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+
+.hidden {
+  display: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .score {
+    font-size: 4.5rem;
+  }
+
+  .current {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+  }
+
+  .dice {
+    height: 6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 1rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .score {
+    font-size: 3.5rem;
+  }
+
+  .current {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .dice {
+    height: 5rem;
+  }
+}
