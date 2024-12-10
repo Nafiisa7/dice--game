@@ -29,7 +29,7 @@ This project is part of my **100 Days of Code Challenge** and showcases my progr
 ---
 
 ## 🌐 Check It Out
-- **Live Demo**: [Add your live link here]
+- **Live Demo**: [Add your live link here](https://nafiisa7.github.io/dice--game/)]
 
 ---
 
